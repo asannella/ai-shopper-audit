@@ -259,10 +259,7 @@
         <span class="hint">Replace every <mark>[bracketed]</mark> field before you run it.</span>
         <button class="copy" id="copy-btn" type="button">Copy prompt</button>
       </div>
-<pre id="prompt-text">I run a Shopify store at [your-store].myshopify.com and I want to see how my products
-show up when a shopper asks an AI assistant (ChatGPT, Perplexity, Copilot, etc.) about
-products like mine. Use the Shopify developer docs to guide this. Do not answer from
-memory. Cite the shopify.dev page for every claim about how the agentic surfaces work.
+<pre id="prompt-text">I run a Shopify store at [your-store].myshopify.com and I want to see how my products show up when a shopper asks an AI assistant (ChatGPT, Perplexity, Copilot, etc.) about products like mine. Use the Shopify developer docs to guide this. Do not answer from memory. Cite the shopify.dev page for every claim about how the agentic surfaces work.
 
 Store context:
 - We sell [category, e.g. GPS units and outdoor navigation gear]
@@ -272,11 +269,9 @@ Store context:
 
 Part 1. Confirm the surfaces
 Using the docs, tell me:
-- What AI agents actually query when they look up a Shopify merchant's products
-  (Storefront MCP on my shop domain, Shopify Catalog / agentic storefront, anything else)
+- What AI agents actually query when they look up a Shopify merchant's products (Storefront MCP on my shop domain, Shopify Catalog / agentic storefront, anything else)
 - Which of those I need to enable in admin, and where
-- Which product fields those surfaces read (title, description, variants, media,
-  metafields, category, availability, price) so I know what the agent can see
+- Which product fields those surfaces read (title, description, variants, media, metafields, category, availability, price) so I know what the agent can see
 
 Part 2. Query my catalog the way a shopper would
 Read-only. Do not create, edit, or delete anything in my store.
@@ -286,8 +281,7 @@ Call my store's Storefront MCP endpoint and run these shopper-style requests:
 3. "[query by compatibility or spec]"
 4. "[vague or misspelled query]"
 5. "[a query for something we do NOT sell, to see what comes back]"
-For each one, show me the raw response and then the plain-English version of what the
-AI would tell the shopper. Then pull full top result of query 1.
+For each one, show me the raw response and then the plain-English version of what the AI would tell the shopper. Then pull full top result of query 1.
 
 Part 3. Scorecard
 For each product that surfaced, tell me:
@@ -295,11 +289,9 @@ For each product that surfaced, tell me:
 - What fields came back empty or thin (description, images, variants, category, price)
 - Whether inventory and price looked correct
 - Any product I expected to see that did not appear, and the likely reason
-Rank the fixes by impact on how an AI agent would present my products. For each fix,
-cite the doc that explains the field or setting.
+Rank the fixes by impact on how an AI agent would present my products. For each fix, cite the doc that explains the field or setting.
 
-If anything cannot be verified from the docs or from a live response, say so plainly
-rather than guessing.</pre>
+If anything cannot be verified from the docs or from a live response, say so plainly rather than guessing.</pre>
     </div>
   </section>
 
