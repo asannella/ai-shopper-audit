@@ -97,6 +97,22 @@
 
   section { display: grid; gap: 18px; }
 
+  .install-label { font-weight: 600; margin-top: 4px; }
+  code.install {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--code-bg);
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .9rem;
+    overflow-wrap: anywhere;
+    user-select: all;
+  }
+  .install-note { font-size: .95rem; color: var(--muted); }
+
   ol.steps {
     list-style: none;
     margin: 0; padding: 0;
@@ -221,6 +237,14 @@
     <h1>See your store the way an AI shopper does</h1>
     <p class="lede">A prompt you paste into an AI assistant. It reads the Shopify developer docs, queries your live catalog the way a shopper would, and hands back a scorecard of what to fix.</p>
   </header>
+
+  <section id="before-you-start">
+    <h2>Before you start</h2>
+    <p>This prompt only works if your AI assistant can read the Shopify developer docs. Install the <a href="https://shopify.dev/docs/apps/build/ai-toolkit">Shopify AI Toolkit</a> first. It gives tools like Claude Code, Cursor, Codex, and VS Code direct access to shopify.dev, which is what lets the assistant cite a real doc page for every claim instead of guessing.</p>
+    <p class="install-label">One-line install for Claude Code:</p>
+    <code class="install">claude plugin install shopify-ai-toolkit@claude-plugins-official</code>
+    <p class="install-note">Other tools and full setup: <a href="https://shopify.dev/docs/apps/build/ai-toolkit">shopify.dev/docs/apps/build/ai-toolkit</a></p>
+  </section>
 
   <section>
     <h2>How to use it</h2>
